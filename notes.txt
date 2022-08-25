@@ -1,0 +1,51 @@
+componente Header {
+  altura: 200px
+  largura: 100%
+  logo: centralizado
+}
+
+
+componente CreateTask {
+  largura: 736
+  input: {
+    placeholder: Adicione uma nova tarefa
+    button: {
+      background: azul
+      text: 'criar'
+      span: '+'
+      largura: 90
+      altura: 52
+      }
+  }
+}
+
+componete ShowTasks {
+  status: {
+    Tarefas criadas: total de tarefas
+    Concluídas: tarefas concluidas 'de' total de tarefas (se não haver tarefas exibe '0')
+  }
+  Empty | Task
+}
+
+componente Empty {
+  Clipboard: svg
+  text: 'Você ainda não tem tarefas cadastradas
+Crie tarefas e organize seus itens a fazer'
+}
+
+componente Task {
+  altura: 72px
+  border radius: 8 px
+  radio button: concluido | nao concluido
+  text: texto da task
+  button: delete
+}
+
+
+componente TodoContainer {
+  Header;
+  CreateTask;
+  ShowTasks: {
+    Empty | Taks
+  }
+}

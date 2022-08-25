@@ -1,0 +1,25 @@
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 720px;
+  padding: 30px;
+  border-top: 1px solid var(--gray-400);
+}
+
+.emptyContainer strong {
+  font-size: 1.25rem;
+  color: var(--gray-300);
+  line-height: 1.4;
+}
+
+.emptyContainer p {
+  font-size: 1.25rem;
+  color: var(--gray-300);
+  line-height: 1.4;
+}
+
+.emptyContainer img {
+  margin: 30px 0 16px 0;
+}

@@ -1,0 +1,41 @@
+.showTaskContainer {
+  max-width: 720px;
+  min-height: 72px;
+}
+
+.showStatus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0px;
+  width: 720px;
+}
+
+.numberOfTasksCreated {
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.numberOfTasksCreated span{
+  border-radius: 16px;
+  padding: 2px 14px;
+  background-color: var(--gray-500);
+  font-weight: bold;
+  color: var(--gray-100);
+  margin-left: 8px;
+}
+
+.numberOfTasksConcluded {
+  font-weight: bold;
+  color: var(--purple-dark);
+}
+
+.numberOfTasksConcluded span {
+  border-radius: 16px;
+  padding: 2px 14px;
+  background-color: var(--gray-500);
+  font-weight: bold;
+  color: var(--gray-100);
+  margin-left: 8px;
+}
+

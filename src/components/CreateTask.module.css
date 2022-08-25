@@ -1,0 +1,69 @@
+.createTaskContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 720px;
+  min-height: 104px;
+}
+
+.createTaskForm {
+  display: flex;
+}
+
+.createTaskButton {
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  font-weight: bold;
+  font-size: 1rem;
+  height: 52px;
+  width: 90px;
+  border-radius: 8px;
+  border: none;
+  transition: 180ms ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createTaskButton:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--blue);
+}
+
+.createTaskButton span {
+  padding: 0 8px;
+  margin-bottom: -4px;
+}
+
+.createTaskButton p {
+  padding-left: 8px;
+}
+
+.createTaskButton:hover {
+  background-color: var(--blue);
+}
+
+.inputTask {
+  background-color: var(--gray-500);
+  width: 622px;
+  height: 52px;
+  margin-right: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  font-size: 1rem;
+  color: var(--gray-200);
+  resize: none;
+  display: flex;
+  align-content: center;
+  padding: 14px 8px;
+  transition: 180ms;
+}
+
+.inputTask:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--blue);
+}
+
+.inputTask:hover {
+ background-color: var(--gray-400);
+}
+
