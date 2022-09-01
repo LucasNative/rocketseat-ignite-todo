@@ -9,11 +9,11 @@ interface CreateProps {
 
 export function CreateTask({ onCreateTask }:CreateProps) {
 
-  const [newTask, setNewTask] = useState("");
+  const [newTaskText, setNewTaskText] = useState('');
 
   function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("");
-    setNewTask(event.target.value);
+    setNewTaskText(event.target.value);
   }
 
   function handleNewTaskInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
@@ -22,8 +22,9 @@ export function CreateTask({ onCreateTask }:CreateProps) {
 
   function handleCreateTask(event: FormEvent) {
     event.preventDefault();
-    onCreateTask(newTask);
-    setNewTask("");
+
+    onCreateTask(newTaskText);
+    setNewTaskText("");
   }
 
   return (
@@ -31,11 +32,12 @@ export function CreateTask({ onCreateTask }:CreateProps) {
       <form onSubmit={handleCreateTask} className={styles.createTaskForm}>
         <textarea
           name="input"
-          placeholder='Crie uma nova tarefa'
+          placeholder="Adicione uma nova tarefa"
           className={styles.inputTask}
           onChange={handleNewTaskChange}
           onInvalid={handleNewTaskInvalid}
-          value={newTask}
+          value={newTaskText}
+          required
         />
         <button className={styles.createTaskButton}>
           <p>Criar</p>
