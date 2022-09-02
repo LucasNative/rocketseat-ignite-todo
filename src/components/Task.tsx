@@ -1,33 +1,39 @@
 import { Trash } from "phosphor-react";
-import { useState } from "react";
+
 import styles from "./Task.module.css";
 import check from "../assets/Check.svg";
 
 interface TaskProps {
+  id: string;
+  taskState: boolean;
   taskText: string;
   onDeleteTask: (taskText: string) => void;
+  onToggleTask: (taskText: string) => void;
 }
 
 const buttonActivateMessage = "Marcar tarefa como concluida";
 const buttonDesactivateMessage = "Desmarcar tarefa como concluida";
 
-export function Task({taskText, onDeleteTask,} : TaskProps) {
-  const [isComplete, setIsComplete] = useState(false);
+export function Task({
+  id,
+  taskState,
+  taskText,
+  onDeleteTask,
+  onToggleTask
+}: TaskProps) {
+
   function handleDeleteTask() {
-    onDeleteTask(taskText);
+    onDeleteTask(id);
   }
 
-
   function handleCompleteTask() {
-    setIsComplete(state => {
-      return state === false ? state = true : state = false;
-    })
+    onToggleTask(id);
   }
 
   return (
     <div
       className={
-        isComplete === false
+        taskState === false
           ? styles.taskContainer
           : styles.taskContainerCompleted
       }
@@ -36,17 +42,17 @@ export function Task({taskText, onDeleteTask,} : TaskProps) {
         <div
           onClick={handleCompleteTask}
           className={
-            isComplete === false ? styles.buttonBox : styles.buttonBoxCompleted
+            taskState === false ? styles.buttonBox : styles.buttonBoxCompleted
           }
           title={
-            isComplete === false
+            taskState === false
               ? buttonActivateMessage
               : buttonDesactivateMessage
           }
         >
           <button
             className={
-              isComplete === false
+              taskState === false
                 ? styles.doneButton
                 : styles.doneButtonCompleted
             }
@@ -56,7 +62,7 @@ export function Task({taskText, onDeleteTask,} : TaskProps) {
         </div>
         <p
           className={
-            isComplete === false ? styles.taskText : styles.taskTextCompleted
+            taskState === false ? styles.taskText : styles.taskTextCompleted
           }
         >
           {taskText}
@@ -71,6 +77,6 @@ export function Task({taskText, onDeleteTask,} : TaskProps) {
       </div>
     </div>
   );
-  }
+}
 
 

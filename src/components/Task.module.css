@@ -7,6 +7,7 @@
   border: 1px solid var(--gray-400);
   max-width: 720px;
   min-height: 72px;
+  transition: 280ms ease-in;
 }
 
 .taskContainer:not(:first-child) {
@@ -26,7 +27,7 @@
   width: 626px;
   line-height: 1.6;
   margin: 0 12px;
-  transition: 180ms ease-in;
+  transition: 220ms ease-in;
 }
 
 .buttonBox {
@@ -34,7 +35,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 180ms ease-in;
+  transition: 220ms ease-in;
   border-radius: 50%;
 }
 
@@ -53,7 +54,7 @@
   cursor: pointer;
   margin-top: 2px;
   color: var(--gray-100);
-  transition: 180ms ease-in;
+  transition: 220ms ease-in;
   outline: 2px solid var(--gray-500);
 }
 
@@ -97,7 +98,7 @@
   border: 1px solid var(--gray-500);
   max-width: 720px;
   min-height: 72px;
-  transition: 180ms ease-in;
+  transition: 280ms ease-in;
 }
 
 .taskContainerCompleted:not(:first-child) {
@@ -111,7 +112,7 @@
   width: 626px;
   line-height: 1.6;
   margin: 0 12px;
-  transition: 180ms ease-in;
+  transition: 220ms ease-in;
 }
 
 .buttonBoxCompleted {

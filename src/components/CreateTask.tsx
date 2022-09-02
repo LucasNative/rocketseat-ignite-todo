@@ -17,7 +17,7 @@ export function CreateTask({ onCreateTask }:CreateProps) {
   }
 
   function handleNewTaskInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
-    event.target.setCustomValidity("Preencha com uma nova tarefa!");
+    event.target.setCustomValidity("Adicione uma nova tarefa!");
   }
 
   function handleCreateTask(event: FormEvent) {
