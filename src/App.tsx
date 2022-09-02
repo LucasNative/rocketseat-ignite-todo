@@ -1,4 +1,3 @@
-import { CreateTask } from "./components/CreateTask";
 import { Header } from "./components/Header";
 import { ShowTasks } from "./components/ShowTasks";
 
@@ -11,7 +10,6 @@ export function App() {
       <div className={styles.appContainer}>
         <ShowTasks />
       </div>
-
     </div>
   );
 }

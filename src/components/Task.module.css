@@ -28,6 +28,7 @@
   line-height: 1.6;
   margin: 0 12px;
   transition: 220ms ease-in;
+  overflow-wrap: break-word;
 }
 
 .buttonBox {
@@ -113,6 +114,7 @@
   line-height: 1.6;
   margin: 0 12px;
   transition: 220ms ease-in;
+  overflow-wrap: break-word;
 }
 
 .buttonBoxCompleted {

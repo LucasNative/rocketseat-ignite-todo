@@ -1,5 +1,5 @@
-import { PlusCircle } from 'phosphor-react'
-import { FormEvent, useState, ChangeEvent, InvalidEvent } from 'react';
+import { PlusCircle } from "phosphor-react";
+import { FormEvent, useState, ChangeEvent, InvalidEvent } from "react";
 
 import styles from "./CreateTask.module.css";
 
@@ -7,12 +7,12 @@ interface CreateProps {
   onCreateTask: (task: string) => void;
 }
 
-export function CreateTask({ onCreateTask }:CreateProps) {
-
-  const [newTaskText, setNewTaskText] = useState('');
+export function CreateTask({ onCreateTask }: CreateProps) {
+  const [newTaskText, setNewTaskText] = useState("");
 
   function handleNewTaskChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("");
+
     setNewTaskText(event.target.value);
   }
 

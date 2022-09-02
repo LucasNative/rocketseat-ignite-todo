@@ -1,7 +1,7 @@
 import { Trash } from "phosphor-react";
 
-import styles from "./Task.module.css";
 import check from "../assets/Check.svg";
+import styles from "./Task.module.css";
 
 interface TaskProps {
   id: string;
@@ -21,7 +21,6 @@ export function Task({
   onDeleteTask,
   onToggleTask
 }: TaskProps) {
-
   function handleDeleteTask() {
     onDeleteTask(id);
   }
@@ -58,7 +57,7 @@ export function Task({
             }
             type="button"
           ></button>
-          <img src={check} alt="" />
+          <img src={check} />
         </div>
         <p
           className={
@@ -78,5 +77,3 @@ export function Task({
     </div>
   );
 }
-
-

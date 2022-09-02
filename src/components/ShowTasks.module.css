@@ -1,6 +1,7 @@
 .showTaskContainer {
-  max-width: 720px;
+  width: 100%;
   min-height: 72px;
+  margin: auto;
 }
 
 .showStatus {
@@ -8,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 0px;
-  width: 720px;
+  width: 100%;
 }
 
 .numberOfTasksCreated {
@@ -16,7 +17,7 @@
   color: var(--blue);
 }
 
-.numberOfTasksCreated span{
+.numberOfTasksCreated span {
   border-radius: 16px;
   padding: 2px 14px;
   background-color: var(--gray-500);
@@ -39,3 +40,8 @@
   margin-left: 8px;
 }
 
+@media (max-width: 720px) {
+  .showTaskContainer {
+    width: 80vw;
+  }
+}

@@ -1,8 +1,8 @@
 import { Task } from "./Task";
 import { Empty } from "./Empty";
 import { CreateTask } from "./CreateTask";
-import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 
 import styles from "./ShowTasks.module.css";
 
@@ -13,9 +13,8 @@ export function ShowTasks() {
   const [numbersOfTasksCreated, setNumbersOfTasksCreated] = useState(0);
 
   const tasksConclued = tasks.filter((task) => {
-    return task.isCompleted === true
+    return task.isCompleted === true;
   }).length;
-
 
   function deleteTask(taskToDeleteId: string) {
     const tasksWithoutDeletedOne = tasks.filter((task) => {
@@ -28,15 +27,15 @@ export function ShowTasks() {
   }
 
   function toggleState(idToToggleTaskState: string) {
-    const  taskToToggle = tasks.map( task => {
+    const taskToToggle = tasks.map((task) => {
       if (task.id === idToToggleTaskState) {
-        task.isCompleted = !task.isCompleted
-        return task
+        task.isCompleted = !task.isCompleted;
+        return task;
       } else {
-        return task
+        return task;
       }
-    })
-    setTasks(taskToToggle)
+    });
+    setTasks(taskToToggle);
   }
 
   function createTask(taskText: string) {
@@ -70,9 +69,7 @@ export function ShowTasks() {
       </div>
       {numbersOfTasksCreated === 0 ? <Empty /> : ""}
       {tasks.map((task) => {
-        if (task.id == "1") {
-          return "";
-        } else {
+        if (task.id !== "1") {
           return (
             <Task
               key={uuidv4()}
@@ -83,6 +80,8 @@ export function ShowTasks() {
               taskState={task.isCompleted}
             />
           );
+        } else {
+          return "";
         }
       })}
     </div>
