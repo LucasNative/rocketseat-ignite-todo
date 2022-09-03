@@ -6,6 +6,8 @@
   width: 100%;
   padding: 30px;
   border-top: 1px solid var(--gray-400);
+  text-align: center;
+
 }
 
 .emptyContainer strong {
@@ -22,4 +24,13 @@
 
 .emptyContainer img {
   margin: 30px 0 16px 0;
+}
+
+@media (max-width: 366px) {
+  .emptyContainer p {
+    margin-top: 8px;
+  }
+  .emptyContainer img {
+    margin: 0px 0 12px 0;
+  }
 }

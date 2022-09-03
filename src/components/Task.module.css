@@ -19,6 +19,7 @@
   align-items: flex-start;
   justify-content: space-around;
   padding: 16px;
+  width: 100%;
 }
 
 .taskText {
@@ -29,6 +30,8 @@
   margin: 0 12px;
   transition: 220ms ease-in;
   overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .buttonBox {
@@ -115,6 +118,8 @@
   margin: 0 12px;
   transition: 220ms ease-in;
   overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .buttonBoxCompleted {

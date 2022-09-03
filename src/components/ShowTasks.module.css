@@ -45,3 +45,25 @@
     width: 80vw;
   }
 }
+
+@media (max-width: 413px) {
+  .numberOfTasksCreated {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .numberOfTasksConcluded {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .numberOfTasksConcluded span {
+    margin-top: 8px;
+  }
+  .numberOfTasksCreated span {
+    margin-top: 8px;
+  }
+  .showStatus {
+    padding: 16px 0px;
+  }
+}
